@@ -14,23 +14,31 @@
 	</head>
 	<body>
 	<script>
-  function play(){
+	function play(){
        var audio = document.getElementById("nano");
        audio.play();
-                 }
-	function changeImage(){
+	}
+	
+	function chngimg(){
+		var foot = document.getElementById("foot");
+			sfx = document.getElementById("ring");
+		if (foot.src == "/img/Z.png") {foot.src = '/img/mm_zero_helmet.png';}
+		else {
+		foot.src = "./img/Z.png";
+		}
+		sfx.play();
 	}
    </script>
 	<audio id="nano" src="./img/Nanomachines, son!.mp3"></audio>
+	<audio id="ring" src="./img/ring.mp3"></audio>
 	<div class="container">
 		<div class="main-content">
-			<!-- Логотип, имя, архив, контакты -->
 			<div class="first-row row">
 				<div class="logo col-md-1">
-					<img id="logo" onclick="document.getElementById('logo').src='./img/logo.png'" src="./img/logo.png" style="width:125px" alt="">
+					<img id="logo" onclick="document.getElementById('logo').src='./img/Banner0.png'" src="./img/Banner0.png" style="width:125px" alt="">
 				</div>
 				<div class="name col-md-5" onclick="play(); document.getElementById('logo').src='./img/Banner.png'">Абельханов Ринат</div>
-				<div class="archive col-md-2 link"><a class="scrollto" href="#labs">Работы</a></div>
+				<div class="archive col-md-2 link"><a class="scrollto" href="#prjcts">Работы</a></div>
 				<div class="contacts col-md-2 link"><a href="./contacts.html">Контакты</a></div>
 				<div class="contacts col-md-2 link hidden-md hidden-lg hidden-xl active-link"><a href="#">На главную страницу</a></div>
 				<div class="search col-md-1 link hidden-sm hidden-xs active-link svg-link">
@@ -51,7 +59,7 @@
 				<div class="text col-md-6 col-md-offset-2 col-sm-12 col-xs-12">
 					<div class="header">Добро пожаловать!</div>
 					<div class="body">
-						<p>Меня зовут Абельханов Ринат. Студент ИКНиТО РГПУ им. А. И. Герцена по направлению ИВТ.</p>
+						<p>Меня зовут Абельханов Ринат.</p><p> Я — выпускник по направлению бакалавриата ИВТ Института&nbsp;Компьютернх Наук и Технологического Образования РГПУ&nbsp;им.&nbsp;А.&nbsp;И.&nbsp;Герцена.</p>
 						<p>Здесь вы можете ознакомиться с моим портфолио.</p>
 					</div>
 				</div>		
@@ -66,7 +74,15 @@
 			<!-- Предметы по курсам -->
 			<div class="third-row row">
 			
-				<div class="year">Предметы по курсам<a name="labs" id="labs"></a></div>
+				<div class="year">Проекты<a name="prjcts" id="prjcts"></a></div>
+				<div class="year-wrap">
+					<div class="col-md-6"><a target="_blank" href="./Tetris/index.html">&#10004; Тетрис на Canvas</a><p>В ходе работы над ВКР был реализован Тетрис на HTML5 с помощью элемента Canvas</p></div>
+					<div class="col-md-6"><a target="_blank" href="./BotN/index.html">&#10004; Beware of the Night</a><p>В рамках проекта «Инди-Школа» в 2018 году совместно с <a target="_blank" href='https://vk.com/lovtin'>Сергеем</a> была реализована игра по&nbsp;мотивам произведения «ВИЙ»</p></div>
+				</div>
+			</div>
+			<br><br><br>
+			<div class="third-row row"> 				
+				<div class="year">Работы по учебным дисциплинам<a name="labs" id="labs"></a></div>
 				<div class="year-wrap">
 					<div class="col-md-6"><a href="./subjects/first_year.html">&#10004; 1 курс</a></div>
 					<div class="col-md-6"><a href="./subjects/second_year.html">&#10004; 2 курс</a></div>
@@ -78,7 +94,7 @@
 			<!-- Футер -->
 			<div class="fourth-row row">		
 				<div class="footer">
-					<div class="made-with col-md-6">Made with <img src="./img/heart.png" alt=""> in HSPU</div>
+					<div class="made-with col-md-6"><img id="foot" onclick="chngimg()" src="./img/Z.png" alt="Zer0"></div>
 					<div class="email col-md-6">rinat-sonic@mail.ru</div>
 				</div>				
 			</div>	

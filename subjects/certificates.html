@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Сертификаты и Грамоты | Абельханов Ринат | Портфолио</title>
+		<title>Сертификаты и Грамоты | Абельханов Ринат</title>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" >
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css" >
 		<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
@@ -12,11 +12,6 @@
 		<link rel="stylesheet" type="text/css" href="../css/custom-font.css" >	
 		<link rel="stylesheet" type="text/css" href="../css/custom-styles.css" >	
 		<link rel="stylesheet" type="text/css" href="../css/subjects-styles.css" >
-	<script>
-
-  
-				  </script>
-			
 	</head>
 	<body>
 	
@@ -25,19 +20,28 @@ function play(){
        var audio = document.getElementById("nano");
        audio.play();}
 	   
-	function changeImage(){
-	}
 var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
     if(!isChrome){
       $('#iframeAudio').remove()
     }
-  else{
+	else{
      $('#nano').remove() //just to make sure that it will not have 2x audio in the background 
   }
+	
+	function chngimg(){
+		var foot = document.getElementById("foot");
+			sfx = document.getElementById("ring");
+		if (foot.src == "/img/Z.png") {foot.src = '../img/mm_zero_helmet.png';}
+		else {
+		foot.src = "../img/Z.png";
+		}
+		sfx.play();
+	}
    </script>
    <iframe src="../img/Nanomachines, son!.mp3" allow="autoplay" style="display:none" id="iframeAudio">
 </iframe> 
 	<audio id="nano" src="../img/Nanomachines, son!.mp3" preload="auto"></audio>
+	<audio id="ring" src="../img/ring.mp3"></audio>
 	<div class="container">
 		<div class="main-content">
 			<!-- Логотип, имя, архив, контакты -->
@@ -58,13 +62,12 @@ var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator
 			
 			<div class="horizontal-divider"></div>
 			
-			<!-- Предметы -->
 			<div class="second-row row">
 				<div class="subject-label col-md-12">Сертификаты и Грамоты</div>
 				<div class="subject col-md-5 col-md-offset-1 col-sm-offset-3 col-xs-offset-2"><a target="_blank" href="https://www.sololearn.com/Certificate/1014-1279401/pdf/">&#10004; Курс по HTML</a></div>
 				<div class="subject col-md-5 col-md-offset-1 col-sm-offset-3 col-xs-offset-2"><a target="_blank" href="https://www.sololearn.com/Certificate/1024-1279401/pdf/">&#10004; Курс по JavaScript</a></div>
 				<div class="subject col-md-5 col-md-offset-1 col-sm-offset-3 col-xs-offset-2"><a target="_blank" href="https://www.sololearn.com/Certificate/1073-1279401/pdf/">&#10004; Курс по Python3</a></div>
-				<div class="subject col-md-5 col-md-offset-1 col-sm-offset-3 col-xs-offset-2"><a target="_blank" href="https://herzen-portfolio.acrodis.ru/go.php?key=969091094930439">&#10004; Грамоты на портале Университета</a></div>
+				<div class="subject col-md-5 col-md-offset-1 col-sm-offset-3 col-xs-offset-2"><a target="_blank" href="https://herzen-portfolio.acrodis.ru/go.php?key=969091094930439">&#10004; Грамоты на сайте РГПУ им. Герцена</a></div>
 				<div class="subject col-md-5 col-md-offset-1 col-sm-offset-3 col-xs-offset-2"><a target="_blank" href="https://www.intuit.ru/verifydiplomas/101117165"><br> <img title="Удостоверение INTUIT.ru №101117165" width="480" height="326" src="https://www.intuit.ru/sites/default/files/diploma/r/i/n/a/t/Nekommerch-2-1117165-ORF.jpg"></a></div>				
 				<div class="subject col-md-5 col-md-offset-1 col-sm-offset-3 col-xs-offset-2"><a target="_blank" href="https://www.intuit.ru/verifydiplomas/101117439"><br> <img title="Удостоверение INTUIT.ru №101117439" width="480" height="326" src="https://www.intuit.ru/sites/default/files/diploma/r/i/n/a/t/Nekommerch-2-1117439-ORF.jpg"></a></div>
 				<div class="subject col-md-5 col-md-offset-1 col-sm-offset-3 col-xs-offset-2"><a target="_blank" href="https://www.intuit.ru/verifydiplomas/101154712"> <img title="Удостоверение INTUIT.ru №101154712" width="480" height="326" src="https://www.intuit.ru/sites/default/files/diploma/r/i/n/a/t/Nekommerch-2-1154712-ORF.jpg"></a></div>
@@ -78,11 +81,19 @@ var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator
 				<div class="subject col-md-5 col-md-offset-1 col-sm-offset-3 col-xs-offset-2"><a target="_blank" href="https://www.intuit.ru/verifydiplomas/101154436"> <img title="Удостоверение INTUIT.ru №101154436" width="480" height="326" src="https://www.intuit.ru/sites/default/files/diploma/r/i/n/a/t/Nekommerch-2-1154436-ORF.jpg"></a></div>
 				<div class="subject col-md-5 col-md-offset-1 col-sm-offset-3 col-xs-offset-2"><a target="_blank" href="https://www.intuit.ru/verifydiplomas/101117862"> <img title="Удостоверение INTUIT.ru №ПК 101117862" width="480" height="326" src="https://www.intuit.ru/sites/default/files/diploma/r/i/n/a/t/Nekommerch-2-1117862-ORF.jpg"></a></div>
 			</div>
+			<div class="third-row row">
+			
+				<div class="year">Проекты<a name="prjcts" id="prjcts"></a></div>
+				<div class="year-wrap">
+					<div class="col-md-6"><a target="_blank" href="./Tetris/index.html">&#10004; Тетрис на Canvas</a><p>В ходе работы над ВКР был реализован Тетрис на HTML5 с помощью элемента Canvas</p></div>
+					<div class="col-md-6"><a target="_blank" href="./BotN/index.html">&#10004; Beware of the Night</a><p>В рамках проекта «Инди-Школа» в 2018 году совместно с <a target="_blank" href='https://vk.com/lovtin'>Сергеем</a> была реализована игра по&nbsp;мотивам произведения «ВИЙ»</p></div>
+				</div>
+			</div>
 
 			<!-- Футер -->
 			<div class="third-row row">
 				<div class="footer">
-					<div class="made-with col-md-6">Made with <img src="../img/heart.png" alt=""> in HSPU</div>
+					<div class="made-with col-md-6"><img id="foot" onclick="chngimg()" src="../img/Z.png" alt="Zer0"></div>
 					<div class="email col-md-6">rinat-sonic@mail.ru</div>
 				</div>				
 			</div>	

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Тетрис на Canvas</title>
+    <style>
+      * { padding: 0; margin: 0; box-sizing: border-box; }
+      body, html { font-family: "Comic Sans MS", sans-serif; background-color: #000033; height: 100%; }
+      body { display: flex; flex-flow: row; height: 100%; }
+      body article { display: flex; align-items: center; justify-content: center; width: 100%; }
+      nav { padding-left: 2em; padding-top: 3em; }
+      nav br { margin: 0.2em; }
+      .noselect { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+      canvas { background-color: lightgray; width:100%; }
+      #upcoming { background-color: #EEEEF0;  outline: solid blue thin; }
+      #score, #rows { font-style: normal; font-weight: bold; }
+      #score { color: blue; }
+      #rows { color: red; }
+      img.help, img.close, img.settings { width: 2.3em; height: 2.3em; }
+      img.close { display: none; }
+      img.help, img.close { cursor: help; }
+      #help img { vertical-align: middle; width: 2em; height: 2em;}
+      #help { display: none; position: absolute; left: 4em; right: 4em; top: 2em; padding: 2em; background-color: white; border: solid black 2px; cursor: help; }
+      #help b { font-size: 120%; }
+      #help p { margin-bottom: 0.8em; }
+      #help hr { margin-top: 1.8em; }
+      #help h1 { text-align: center; font-size:120%; margin-bottom: 1em; }
+      code { background-color: yellow; color: red; font-family: sans-serif, "Arial"; border: solid thin black; padding: 0px 3px 0px 3px; }
+      #game { display: flex; flex-flow: row; background-color: snow; border: solid black 0px; border-radius: 8px; box-shadow: 10px 10px 10px #320D0D; }
+      #left {display: flex; flex-flow: column; justify-content: space-between; align-items: center; margin-left: 24px; margin-right: 24px; white-space: nowrap; }
+      #left p { text-align: center; }
+      #board { width: 10em; height: 20em; }
+      #upcoming { width: 8em; height: 6em; }
+      #checkboxClutter { margin-right: 0.2em; }
+    </style> 
+  </head>
+<body>
+
+<nav id="toolbar">
+<img alt="Help" id="id.help" class="help" src="images/help.png" title="Help"/><img alt="Close Help" id="id.close-help" class="close" src="images/close.png" title="Help"/><br/><br/>
+<img alt="Settings" id="id.settings" class="settings" src="images/settings.png" title="Settings"/>
+</nav>
+
+<article id="main">
+  <div id="game">
+    <div id="left">
+      <div>
+        <p id="prompt">Нажмите <span id="statusKeyName"></span>,<br/>чтобы <span id="statusVerb"></span></p>
+        <br/><br/><br/>
+        <p style='color: blue' id="paused"><b>Пауза</b></p>
+		<p style='color: red' id="GameOver"><b>Игра Окончена!</b></p>
+      </div>
+      <canvas id="upcoming" title="Next tetromino"></canvas>
+      <div>
+        <p>Очки: <em id="score"></em></p>
+        <br/>
+        <p>Ряды: <em id="rows"></em></p>
+      </div/>
+      <div id="sectionClutter" title="Беспорядок, созданный в начале игры">
+        <label for="checkboxClutter"><input type="checkbox" id="checkboxClutter" checked="checked"/>Беспорядок</label>&ThinSpace;
+        <select id="clutterSelector"></select>
+      </div>
+    </div>
+    <div id="right"><canvas id="board"></canvas></div>
+  </div>
+</article>
+
+<div id="help">
+<h1>Тетрис на Canvas</h1>
+<p><b id="help.left"></b>, <b id="help.right"></b>, <b id="help.down"></b>: передвигать тетрамино</p>
+<p><b id="help.rotateRight"></b>: вращать тетрамино <b>&orarr;</b></p> <p>Ctrl+<b id="help.rotateLeft"></b>: вращать тетрамино <b>&olarr;</b></p>
+<p><i id="help.dropDown"></i>: сброс тетрамино вниз</p>
+<p><i id="help.startPauseContinue"></i>: начать/остановить/продолжить игру</p>
+<p><i id="help.cancelGame"></i>: прекратить игру</p>
+<p><i id="help.settings"></i>: настройки <img alt="Settings" src="images/settings.info.png"/></p>
+<p><i id="help.help"></i>: показать/скрыть помощь</p><hr/>
+<br/><p>Чтобы закрыть окно помощи, нажмите F1 или кликните на поле информации или на <img alt="Close" src="images/close.info.png"/></p></p>
+</div>
+
+<script src="settings.js"></script>
+<script src="application.js"></script>
+
+</body>
+</html>

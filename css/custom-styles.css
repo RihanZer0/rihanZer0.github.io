@@ -150,6 +150,7 @@ body, html, .container {
 
 /*---------------------*/
 
+
 .year{
 	text-align : center;
 	Font-Family: Comic Sans, cursive;
@@ -159,6 +160,11 @@ body, html, .container {
 
 .year-wrap {
 	margin-top : 3%;
+	Font-Family: Comic Sans, cursive;
+	Font-weight : light;
+	Font-Size: 20px;
+	color : rgb(200,200,200);
+	margin-top : 5%;
 }
 
 .year-wrap div, .subject div{

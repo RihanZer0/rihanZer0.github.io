@@ -19,10 +19,19 @@
        var audio = document.getElementById("nano");
        audio.play();
                  }
-	function changeImage(){
+	
+	function chngimg(){
+		var foot = document.getElementById("foot");
+			sfx = document.getElementById("ring");
+		if (foot.src == "/img/Z.png") {foot.src = '../img/mm_zero_helmet.png';}
+		else {
+		foot.src = "../img/Z.png";
+		}
+		sfx.play();
 	}
    </script>
 	<audio id="nano" src="../img/Nanomachines, son!.mp3" ></audio>
+	<audio id="ring" src="../img/ring.mp3"></audio>
 	<div class="container">
 		<div class="main-content">
 			<!-- Логотип, имя, архив, контакты -->
@@ -56,7 +65,7 @@
 			<!-- Футер -->
 			<div class="third-row row">
 				<div class="footer">
-					<div class="made-with col-md-6">Made with <img src="../img/heart.png" alt=""> in HSPU</div>
+					<div class="made-with col-md-6"><img id="foot" onclick="chngimg()" src="../img/Z.png" alt="Zer0"></div>
 					<div class="email col-md-6">rinat-sonic@mail.ru</div>
 				</div>				
 			</div>	
