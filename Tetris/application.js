@@ -511,7 +511,7 @@ try {
         layout.showKeyboard(effectiveSettings);
         game.specialKeySet = new Set([effectiveSettings.key.help.keyCode, effectiveSettings.key.settings.keyCode]);
         document.body.title = document.title;
-        if (!window.requestAnimationFrame) // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+        if (!window.requestAnimationFrame)
             window.requestAnimationFrame =
                 window.webkitRequestAnimationFrame ||
                 window.mozRequestAnimationFrame ||
