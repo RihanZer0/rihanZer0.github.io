@@ -1,17 +1,14 @@
 @font-face {
-  font-family: 'Fira Sans';
+  font-family: 'Comic Sans';
   Font-weight : bold;
-  src: url('../fonts/ofont.ru_Fira Sans.ttf');
 }
 
 @font-face {
-  font-family: 'Fira Sans';
+  font-family: 'Comic Sans';
   Font-weight : regular;
-  src: url('../fonts/ofont.ru_Fira Sans Regular.ttf');
 }
 
 @font-face {
-  font-family: 'Fira Sans';
+  font-family: 'Comic Sans';
   Font-weight : light;
-  src: url('../fonts/FiraSans-Light.otf');
 }
